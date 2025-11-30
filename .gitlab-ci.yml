@@ -1,0 +1,9 @@
+pages:
+  stage: deploy
+  script:
+    - echo "Nothing to build, just publishing the public/ folder"
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
